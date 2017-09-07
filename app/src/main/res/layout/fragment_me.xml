@@ -1,0 +1,118 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#66c0c0c0"
+    tools:context=".fragment.MeFragment">
+
+    <!-- 个人信息：昵称、账号-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:paddingLeft="38dp"
+        android:layout_marginTop="28dp">
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="36dp"
+            android:text="nickname"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="nickname"
+            android:textSize="20dp"
+            android:layout_alignBaseline="@+id/tv_nickname"
+            android:layout_toRightOf="@+id/tv_nickname"
+            android:layout_marginLeft="30dp"/>
+    </RelativeLayout>
+
+    <!--声音-->
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/bt_sound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:background="#fff"
+            android:paddingLeft="30dp"
+            android:drawableLeft="@mipmap/ic_launcher"
+            android:text="声音"
+            android:textAlignment="textStart"
+            android:textSize="25dp"/>
+
+    </RelativeLayout>
+
+
+    <!--检查更新-->
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/bt_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:background="#fff"
+            android:paddingLeft="30dp"
+            android:drawableLeft="@mipmap/ic_launcher"
+            android:text="检查更新"
+            android:textAlignment="textStart"
+            android:textSize="25dp"/>
+
+    </RelativeLayout>
+
+
+    <!--作者信息-->
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/bt_feed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:background="#fff"
+            android:paddingLeft="30dp"
+            android:drawableLeft="@mipmap/ic_launcher"
+            android:text="作者信息"
+            android:textAlignment="textStart"
+            android:textSize="25dp"/>
+
+    </RelativeLayout>
+
+    <!--退出-->
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp">
+
+        <Button
+            android:id="@+id/bt_exit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:background="#fff"
+            android:paddingLeft="30dp"
+            android:drawableLeft="@mipmap/ic_launcher"
+            android:text="退出"
+            android:textAlignment="textStart"
+            android:textSize="25dp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

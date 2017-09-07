@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/title_bar">
+
+        <Button
+            android:id="@+id/bt_esc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:textColor="#fff"
+            android:text="取消" />
+
+
+        <TextView
+            android:id="@+id/tv_send_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="发微博"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_title" />
+
+        <Button
+            android:id="@+id/bt_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:textColor="#fff"
+            android:layout_centerVertical="true"
+            android:text="发送" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_add_blog"
+        android:layout_below="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:hint="请输入微博内容" />
+</RelativeLayout>
