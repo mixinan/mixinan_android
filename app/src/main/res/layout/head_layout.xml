@@ -9,12 +9,15 @@
         android:layout_height="41dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
+        android:gravity="center_vertical"
         android:background="@android:drawable/title_bar">
 
         <Button
             android:id="@+id/bt_add_blog"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
             android:text="写微博"
             android:background="@android:color/transparent"
             android:textColor="#fff"/>
@@ -32,7 +35,9 @@
         <Button
             android:id="@+id/bt_search"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
             android:text="搜索"
             android:background="@android:color/transparent"
             android:textColor="#fff"/>

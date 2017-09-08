@@ -50,6 +50,13 @@ public class Const {
     //public static String registUser = BASE_URL + "/user/regist.do?name=125&password=125&gender=1";
       public static String registUser = BASE_URL + "/user/regist.do?name=";
 
+    //查看 name 有没有被占用
+    //public static String checkNameUsed = BASE_URL + "/user/checkNameUsed.do?name=mixinan";
+    public static String checkNameUsed = BASE_URL + "/user/checkNameUsed.do";
+
+
+
+
     //添加图片
     String addPic = "http://47.93.3.163:8080/mixinan/pic/add.do?url=test&desc=hi";
     //获取所有图片

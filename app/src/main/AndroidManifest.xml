@@ -19,7 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AddBlogActivity" />
+        <activity android:name=".AddBlogActivity"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:screenOrientation="portrait"/>
         <activity android:name=".MainActivity" />
         <activity android:name=".RegistActivity"/>
         <activity android:name=".LoginActivity"/>

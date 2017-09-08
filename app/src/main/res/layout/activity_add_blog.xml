@@ -6,16 +6,18 @@
     <RelativeLayout
         android:id="@+id/rl"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="41dp"
         android:background="@android:drawable/title_bar">
 
         <Button
             android:id="@+id/bt_esc"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_centerVertical="true"
             android:background="@android:color/transparent"
             android:textColor="#fff"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
             android:text="取消" />
 
 
@@ -31,7 +33,9 @@
         <Button
             android:id="@+id/bt_send"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
             android:layout_alignParentRight="true"
             android:background="@android:color/transparent"
             android:textColor="#fff"
@@ -43,6 +47,8 @@
         android:id="@+id/et_add_blog"
         android:layout_below="@+id/rl"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:hint="请输入微博内容" />
+        android:layout_height="match_parent"
+        android:hint="请输入微博内容"
+        android:padding="10dp"
+        android:gravity="left|top"/>
 </RelativeLayout>
