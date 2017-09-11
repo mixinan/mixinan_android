@@ -8,8 +8,10 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.util.Log;
 
+import com.example.administrator.myapplication.PicDetailActivity;
 import com.example.administrator.myapplication.R;
 import com.example.administrator.myapplication.adapter.WeiboAdapter;
+import com.example.administrator.myapplication.entity.Pic;
 import com.example.administrator.myapplication.entity.WeiboData;
 import com.example.administrator.myapplication.module.BlogModule;
 
@@ -98,5 +100,19 @@ public class Util {
         if (log_open){
             Log.i("mixinan", logString);
         }
+    }
+
+
+    /**
+     * 显示大图
+     * @param context
+     * @param pic
+     * @param from
+     */
+    public static void showPicInActivity(Context context, Pic pic, int from){
+        Intent intent = new Intent(context, PicDetailActivity.class);
+        intent.putExtra("clickPic",pic);
+        intent.putExtra("from",from);
+        context.startActivity(intent);
     }
 }

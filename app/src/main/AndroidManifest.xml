@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".WelActivity">
+        <activity android:name=".WelActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,6 +24,7 @@
             android:windowSoftInputMode="stateVisible|adjustResize"
             android:screenOrientation="portrait"/>
         <activity android:name=".MainActivity" />
+        <activity android:name=".PicDetailActivity" />
         <activity android:name=".RegistActivity"/>
         <activity android:name=".LoginActivity"/>
         <activity android:name=".SearchActivity"/>

@@ -49,4 +49,5 @@ public class MyApp extends Application {
     public static int getBlogPages(){
         return blogPages;
     }
+
 }

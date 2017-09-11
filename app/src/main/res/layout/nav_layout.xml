@@ -23,9 +23,9 @@
         <RadioButton
             android:id="@+id/rb_radio"
             style="@style/radioButton_Main"
-            android:text="音乐"
+            android:text="人在达内"
             android:textColor="@drawable/rb_text_selector"
-            android:drawableTop="@drawable/rb_music_selector"/>
+            android:drawableTop="@drawable/rb_tedu_selector"/>
 
         <RadioButton
             android:id="@+id/rb_me"

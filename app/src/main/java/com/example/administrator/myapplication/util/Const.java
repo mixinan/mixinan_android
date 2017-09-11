@@ -6,6 +6,17 @@ package com.example.administrator.myapplication.util;
 
 public class Const {
     /**
+     * 从welcome页直接跳转到picDetailActivity
+     */
+    public static int PIC_welcome_tiao_zhuan = 2;
+    /**
+     * 通过点击listview跳转到picDetailActivity
+     */
+    public static int PIC_listview_tiao_zhuan = 0;
+
+
+
+    /**
      偏好设置的名字
      */
     public static String LOGIN_USER_FILE_NAME = "user-info";
@@ -31,8 +42,21 @@ public class Const {
     //public static String getWeiboByPage = BASE_URL + "/blog/getWeiboByPage.do?pageno=1&blogno=10";
     public static String getWeiboByPage = BASE_URL + "/blog/getWeiboByPage.do?pageno=";
 
+
+
+
+    /**
+     * 图片区域
+     */
     //获取最后一张图片
     public static String getLastPic = BASE_URL + "/pic/getLastPic.do";
+
+    //获取所有图片
+    public static String getPics = BASE_URL + "/pic/getAll.do";
+
+
+
+
 
     //通过userId找到user
     public static String getUserById = BASE_URL + "/user/getUserById.do?id=";
@@ -59,8 +83,7 @@ public class Const {
 
     //添加图片
     String addPic = "http://47.93.3.163:8080/mixinan/pic/add.do?url=test&desc=hi";
-    //获取所有图片
-    String getPics = "http://47.93.3.163:8080/mixinan/pic/getAll.do";
+
 
 
 

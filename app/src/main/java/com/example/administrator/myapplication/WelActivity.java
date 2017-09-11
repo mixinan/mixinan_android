@@ -22,7 +22,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.bumptech.glide.Glide;
-import com.example.administrator.myapplication.entity.Blog;
 import com.example.administrator.myapplication.entity.Pic;
 import com.example.administrator.myapplication.util.Const;
 import com.google.gson.Gson;
@@ -37,12 +36,14 @@ import static com.example.administrator.myapplication.R.anim.animation_text;
  */
 
 public class WelActivity extends Activity implements View.OnClickListener {
-    private TextView tv;
+    private TextView tv_pic_name;
+    private TextView tv_time;
     private ImageView iv;
     private Animation anim;
     private int count = 4;
     private String picUrl;
     private String userName;
+    private Pic pic;
 
     private Handler handler = new Handler() {
         @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
@@ -50,12 +51,12 @@ public class WelActivity extends Activity implements View.OnClickListener {
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             if (msg.what == 0) {
-                tv.setBackground(getResources().getDrawable(R.drawable.border, null));
-                tv.setText("跳过 " + getCount());
+                tv_time.setBackground(getResources().getDrawable(R.drawable.border, null));
+                tv_time.setText("跳过 " + getCount());
                 handler.sendEmptyMessageDelayed(0, 1000);
                 anim.reset();
 
-                tv.startAnimation(anim);
+                tv_time.startAnimation(anim);
             }
         }
     };
@@ -93,7 +94,8 @@ public class WelActivity extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wel);
 
-        tv = (TextView) findViewById(R.id.tv_time);
+        tv_pic_name = (TextView) findViewById(R.id.tv_wel_pic_name);
+        tv_time = (TextView) findViewById(R.id.tv_time);
         iv = (ImageView) findViewById(R.id.iv_wel);
         anim = AnimationUtils.loadAnimation(this, animation_text);
         picUrl = Const.getLastPic;
@@ -106,29 +108,32 @@ public class WelActivity extends Activity implements View.OnClickListener {
 
         getPicture();
 
-        tv.setOnClickListener(this);
+        tv_time.setOnClickListener(this);
     }
 
     private void getPicture() {
         StringRequest request = new StringRequest(Request.Method.GET, picUrl, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Pic p = new Pic();
                 Gson gson = new Gson();
                 try {
                     JSONObject obj = new JSONObject(response);
                     String picJson = obj.getString("data");
                     Log.i("mixinan", picJson);
-                    p = gson.fromJson(picJson, Pic.class);
+                    pic = gson.fromJson(picJson, Pic.class);
                     //使用Glide，加载网络图片（通过pic地址）
                     Glide.with(WelActivity.this)
-                            .load(p.getMi_pic_url())
+                            .load(pic.getMi_pic_url())
                             .into(iv);
 
-                    //图片渐变出现
-                    AlphaAnimation alpha = new AlphaAnimation(0.1f,1.0f);
+                    //顯示照片name
+                    tv_pic_name.setText(pic.getMi_pic_name());
+
+                    //图片、name 渐变出现
+                    AlphaAnimation alpha = new AlphaAnimation(0.1f, 1.0f);
                     alpha.setDuration(1200);
                     iv.startAnimation(alpha);
+                    tv_pic_name.startAnimation(alpha);
 
                     //开始倒计时
                     handler.sendEmptyMessageDelayed(0, 1000);

@@ -7,18 +7,16 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.example.administrator.myapplication.fragment.BlogFragment;
 import com.example.administrator.myapplication.fragment.MeFragment;
-import com.example.administrator.myapplication.fragment.RadioFragment;
+import com.example.administrator.myapplication.fragment.PicFragment;
 import com.example.administrator.myapplication.util.ToastUtil;
 
 import java.util.ArrayList;
@@ -47,7 +45,7 @@ public class MainActivity extends FragmentActivity {
         vp = (ViewPager) findViewById(R.id.vp);
         rg = (RadioGroup) findViewById(R.id.rg);
         fs.add(new BlogFragment());
-        fs.add(new RadioFragment());
+        fs.add(new PicFragment());
         fs.add(new MeFragment());
 
         btAdd.setOnClickListener(new View.OnClickListener() {
