@@ -6,10 +6,11 @@
     </style>
 
     <style name="list_style">
-        <item name="android:dividerHeight">10dp</item>
         <item name="android:scrollbarStyle">outsideOverlay</item>
         <item name="android:cacheColorHint">#00000000</item>
         <item name="android:listSelector">#00000000</item>
+        <item name="android:padding">6dp</item>
+        <item name="android:divider">@null</item>
     </style>
 
     <style name="radioButton_Main">

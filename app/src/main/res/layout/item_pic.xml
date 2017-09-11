@@ -1,61 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:cardCornerRadius="10dp"
-    app:cardElevation="3dp"
-    app:cardMaxElevation="6dp"
-    android:layout_margin="8dp"
-    android:padding="8dp">
+    android:layout_height="wrap_content">
 
-    <LinearLayout
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="8dp">
+        android:layout_margin="8dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="2dp"
+        app:cardMaxElevation="5dp"
+        app:contentPadding="8dp">
 
-        <ImageView
-            android:id="@+id/iv_item_pic"
-            android:layout_width="138dp"
-            android:layout_height="180dp"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/ic_launcher" />
-
-
-        <!-- 右边 文字部分-->
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:padding="15dp">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#22c0c0c0">
 
-            <TextView
-                android:id="@+id/tv_item_pic_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="姓名" />
+            <ImageView
+                android:id="@+id/iv_item_pic"
+                android:layout_width="138dp"
+                android:layout_height="180dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/dream" />
 
-            <TextView
-                android:id="@+id/tv_item_pic_desc"
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
+
+            <!-- 右边 文字部分-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
                 android:layout_weight="1"
-                android:text="描述" />
+                android:orientation="vertical"
+                android:padding="8dp">
 
-            <TextView
-                android:id="@+id/tv_item_pic_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="时间" />
+                <TextView
+                    android:id="@+id/tv_item_pic_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="《人在达内》"
+                    android:textColor="#88ff0000"
+                    android:textSize="16dp" />
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="6dp"
+                    android:background="#38000000" />
+
+                <TextView
+                    android:id="@+id/tv_item_pic_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="4"
+                    android:text="每个人，都有自己的故事和梦想。下拉刷新，获取你身边的故事。"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_item_pic_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="作者：万码千钧"/>
+
+            </LinearLayout>
         </LinearLayout>
+    </android.support.v7.widget.CardView>
 
-
-    </LinearLayout>
-</android.support.v7.widget.CardView>
+</RelativeLayout>

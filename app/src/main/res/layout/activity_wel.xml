@@ -8,7 +8,7 @@
     android:background="#fff"
     tools:context=".WelActivity">
 
-    <RelativeLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="8">
@@ -20,16 +20,21 @@
             android:scaleType="centerCrop"
             app:srcCompat="@mipmap/ic_launcher"/>
 
-    </RelativeLayout>
+        <TextView
+            android:id="@+id/tv_wel_pic_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="name"
+            android:textColor="#ddd"
+            android:textSize="36dp"
+            android:background="#38000000"
+            android:gravity="center"
+            android:padding="6dp"
+            android:layout_gravity="bottom"/>
 
-    <TextView
-        android:id="@+id/tv_wel_pic_name"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:textColor="#f00"
-        android:textSize="36dp"
-        android:gravity="center"/>
+    </FrameLayout>
+
+
 
     <View
         android:layout_width="match_parent"
